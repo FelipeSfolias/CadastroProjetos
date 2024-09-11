@@ -1,5 +1,4 @@
 package br.edu.famper.cadastroprojeto.controller;
-
 import br.edu.famper.cadastroprojeto.model.Projeto;
 import br.edu.famper.cadastroprojeto.service.ProjetoService;
 import org.springframework.http.HttpStatus;
@@ -40,9 +39,7 @@ public class ProjetoController {
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id){
         projetoService.deleteById(id);
-        return ResponseEntity.status(HttpStatus.OK).build();
-//    public ResponseEntity<Optional<?>> delete(@PathVariable Long id) {
-//        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
 }
